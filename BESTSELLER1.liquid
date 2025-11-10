@@ -2,10 +2,9 @@
 
 <section class="x-petco x-petco--h" data-petco-h aria-label="{{ collection.title | default: 'Pet-Co Collection' }}">
   <h2 class="x-petco__heading">
-    <span class="xpet__eyebrow">Weekly</span>
-    <span class="xpet__title">Weekly Selection</span>
-  </h2>
-  <a class="xpet__cta xpet__cta--top" href="{{ collection.url }}">VIEW ALL</a>
+  <span class="xpet__eyebrow">Weekly</span>
+  <span class="xpet__title">Weekly Selection</span>
+</h2>
 
   {% if collection and collection.products_count > 0 %}
     <div class="xpet__viewport">
@@ -164,8 +163,8 @@
           {% endfor %}
         </div>
       </div>
-      <a class="xpet__cta xpet__cta--end" href="{{ collection.url }}">VIEW ALL</a>
 
+<a class="xpet__cta xpet__cta--end" href="{{ collection.url }}">VIEW ALL</a>
       <button class="xpet__nav-button xpet__nav-button--next" type="button" aria-label="Scroll right" aria-hidden="true">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.47 12.53a.75.75 0 0 0 1.06 0L10.06 9a1.25 1.25 0 0 0 0-2.02L6.53 3.47a.75.75 0 1 0-1.06 1.06L9 8l-3.53 3.47a.75.75 0 0 0 0 1.06Z"/></svg>
       </button>
@@ -176,44 +175,8 @@
 </section>
 
 <style>
-  .x-petco{width:100%;padding:32px 50px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-  .x-petco__heading{margin:0 0 20px;font-weight:600;font-size:1.6rem}
-  .xpet__eyebrow{
-    display:block;
-    font-size:.8rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:#777;
-    margin-bottom:4px;
-  }
-  .xpet__title{
-    display:block;
-    font-size:1.6rem;
-    font-weight:600;
-    letter-spacing:.02em;
-  }
-
-  .xpet__cta{
-    display:inline-block;
-    padding:10px 20px;
-    background:#5f5f5f;
-    color:#fff;
-    text-decoration:none;
-    letter-spacing:.3em;
-    text-transform:uppercase;
-    font-size:.85rem;
-    line-height:1;
-    border:none;
-  }
-  .xpet__cta--top{
-    margin:12px auto 20px;
-    position:relative;
-    left:50%;
-    transform:translateX(-50%);
-  }
-  .xpet__cta--end{
-    margin:16px 0 0;
-  }
+  .x-petco{width:100%;padding:32px 50px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; text-align: center; }
+  .x-petco__heading{margin:0 0 16px;font-weight:600;font-size:1.6rem; text-align: center; }
 
   .xpet__viewport{position:relative}
   .xpet__nav-button{
@@ -285,6 +248,41 @@
   }
 
   @media (prefers-reduced-motion:reduce){.xpet__track{scroll-behavior:auto}}
+/* Heading: eyebrow + title */
+.xpet__eyebrow{
+  display:block;
+  font-size:.8rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:4px;
+}
+.xpet__title{
+  display:block;
+  font-size:1.6rem;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+/* VIEW ALL button (shared) */
+.xpet__cta{
+  display:inline-block;
+  padding:10px 20px;
+  background:#5f5f5f; /* medium gray like screenshot */
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  font-size:.85rem;
+  line-height:1;
+  border:none;
+}
+
+/* End-of-rail button */
+.xpet__cta--end{
+  display: inline-block;
+  margin: 20px auto 0;
+}
 </style>
 
 <script>
